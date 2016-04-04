@@ -1,7 +1,7 @@
 # Resturaunt Website
 
 ### What is this?
-This is a repository for holding necessary website files in order to construct a Resturaunt themed testing website.
+This is a repository for holding necessary website files in order to construct a resturaunt themed testing website.
 
 ### Can I use this myself as a template etc?
 You may use this projects files as long as the use doesn't conflict with the AGPL Version 3.

@@ -1,5 +1,4 @@
 # Resturaunt Website
-## Repository for Resturaunt Website Project
 
 ### What is this?
 This is a repository for holding necessary website files in order to construct a Resturaunt themed testing website.

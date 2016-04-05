@@ -1,8 +1,5 @@
 @charset "utf-8";
-/* Simple fluid media
-   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
-   http://www.alistapart.com/articles/fluid-images/ 
-*/
+
 img, object, embed, video {
 	max-width: 100%;
 }
@@ -11,23 +8,7 @@ img, object, embed, video {
 	width:100%;
 }
 
-/*
-	Dreamweaver Fluid Grid Properties
-	----------------------------------
-	dw-num-cols-mobile:		6;
-	dw-num-cols-tablet:		10;
-	dw-num-cols-desktop:	12;
-	dw-gutter-percentage:	25;
-	
-	Inspiration from "Responsive Web Design" by Ethan Marcotte 
-	http://www.alistapart.com/articles/responsive-web-design
-	
-	and Golden Grid System by Joni Korpi
-	http://goldengridsystem.com/
-*/
-
-/* Mobile Layout: 480px and below. */
-
+/* Mobile Layout */
 .gridContainer {
 	margin-left: auto;
 	margin-right: auto;
@@ -36,57 +17,66 @@ img, object, embed, video {
 	padding-right: 1.5166%;
 }
 
-body {
-	background-color: #CCC;
-}
-
-header, nav, article, div, aside, footer {
-	clear: both;
-	float: left;
-	margin-left: 0;
+[class*="col-"] {
 	width: 100%;
-	display: block;
-	margin-top: 15px;
+	float: left;
 }
 
 header {
-	background-color: #FFC;
-	text-align: center;
+	background-color: #6CF;
 }
 
 nav {
+	background-color: #93F;
+}
+
+article {
+}
+
+aside {
+}
+
+footer {
+}
+
+header, nav {
+	height: 6em;
+	line-height: 6em;
 	text-align: center;
 }
 
-nav ul li {
-	width: 25%;
+nav ul, header a {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
 }
 
-/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+/* Tablet Layout */
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 600px) and (orientation: landscape) {
 	.gridContainer {
 		width: 91.14%;
 		padding-left: 0.93%;
 		padding-right: 0.93%;
 	}
 	
-	header {
-		width: 65%;
-		text-align: left;
-	}
-	
-	nav {
-		width: 30%;
-		text-align: center;
-		clear: none;
-		margin-left: 5%;
-	}
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
 }
 
-/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+/* Desktop Layout */
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
 	.gridContainer {
 		width: 88.5%;
 		max-width: 1232px;
@@ -95,11 +85,20 @@ nav ul li {
 		margin: auto;
 	}
 	
-	header {
-		width: 75%;
-	}
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
 	
-	nav {
-		width: 20%;
+	header {
+		text-align: left;
 	}
 }

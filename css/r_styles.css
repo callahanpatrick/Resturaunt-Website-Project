@@ -139,12 +139,8 @@ footer div {
         margin-right: auto;
     }
     
-	header {
-		text-align: left;
-	}
-    
-    header aside {
-        margin-bottom: 
+    header {
+	text-align: left;
     }
     
     article div h1, article div p, footer div {

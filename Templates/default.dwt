@@ -15,9 +15,9 @@
     upcoming events, an online reservation system, gift card options, and online coupons and discount available." />
     
     <!-- Linked Files -->
-    <link rel="stylesheet" type="text/css" href="spry/SpryMenuBarHorizontal.css" />
-    <link rel="stylesheet" type="text/css" href="css/boilerplate.css" />
-    <link rel="stylesheet" type="text/css" href="css/r_styles.css" />
+    <link rel="stylesheet" type="text/css" href="../spry/SpryMenuBarHorizontal.css" />
+    <link rel="stylesheet" type="text/css" href="../css/boilerplate.css" />
+    <link rel="stylesheet" type="text/css" href="../css/r_styles.css" />
 	<!-- TemplateEndEditable -->
 	</head>
 
@@ -58,6 +58,7 @@
         	</nav>
         </div>
         
+		<!-- TemplateBeginEditable name="content" -->
         <div id="contentCase" class="col-12">
             <article class="col-8 col-m-6">
                 <div class="col-6 col-m-12">
@@ -103,6 +104,7 @@
                 </div>
             </aside>
         </div>
+		<!-- TemplateEndEditable -->
         
         <footer class="col-12">
             <div class="col-6 col-m-12">

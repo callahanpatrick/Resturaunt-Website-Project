@@ -1,25 +1,28 @@
 @charset "utf-8";
 
-img, object, embed, video {
-	max-width: 100%;
-}
-/* IE 6 does not support max-width so default to width 100% */
-.ie6 img {
-	width:100%;
+/* Mobile Layout */
+
+.logo {
+    height: 8em;
+    border-radius: 90%;
 }
 
-/* Mobile Layout */
-.gridContainer {
-	margin-left: auto;
-	margin-right: auto;
-	width: 87.9666%;
-	padding-left: 1.5166%;
-	padding-right: 1.5166%;
+.logo:hover {
+    background-color: #93F;
+    transition: background-color .25s ease-in-out;
 }
 
 [class*="col-"] {
 	width: 100%;
 	float: left;
+}
+
+#headerCase {
+    box-shadow: 0px 0px 15px #888888;
+}
+
+body {
+    background-color: firebrick;
 }
 
 header {
@@ -31,17 +34,26 @@ nav {
 }
 
 article {
+    background-color: blanchedalmond;
 }
 
 aside {
+    background-color: cadetblue;
+    color: white;
 }
 
 footer {
+    background-color: firebrick;
+    color: white;
+}
+
+img, object, embed, video {
+	max-width: 100%;
 }
 
 header, nav {
-	height: 6em;
-	line-height: 6em;
+	height: 9em;
+	line-height: 9em;
 	text-align: center;
 }
 
@@ -51,15 +63,26 @@ nav ul, header a {
 	vertical-align: middle;
 }
 
+article div {
+    min-height: 5em;
+}
+
+article div p {
+    text-align: justify;
+}
+
+article div h1, article div p, aside h1, aside p, footer h2, footer p {
+    padding: 5px;
+    min-height: 2em;
+}
+
+footer div {
+    text-align: center;
+}
+
 /* Tablet Layout */
 
-@media only screen and (min-width: 600px) and (orientation: landscape) {
-	.gridContainer {
-		width: 91.14%;
-		padding-left: 0.93%;
-		padding-right: 0.93%;
-	}
-	
+@media only screen and (min-width: 600px) and (orientation: landscape) {	
 	.col-m-1 {width: 8.33%;}
 	.col-m-2 {width: 16.66%;}
 	.col-m-3 {width: 25%;}
@@ -72,19 +95,30 @@ nav ul, header a {
 	.col-m-10 {width: 83.33%;}
 	.col-m-11 {width: 91.66%;}
 	.col-m-12 {width: 100%;}
+    
+    article div h1 {
+        text-align: center;
+    }
+    
+    #headerCase {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    
+    #contentCase {
+        background-color: blanchedalmond;
+        margin-top: 9em;
+    }
 }
 
 /* Desktop Layout */
 
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
-	.gridContainer {
-		width: 88.5%;
-		max-width: 1232px;
-		padding-left: 0.75%;
-		padding-right: 0.75%;
-		margin: auto;
-	}
-	
+    .logo {
+        margin-left: 25px;
+    }
+    
 	.col-1 {width: 8.33%;}
 	.col-2 {width: 16.66%;}
 	.col-3 {width: 25%;}
@@ -98,7 +132,30 @@ nav ul, header a {
 	.col-11 {width: 91.66%;}
 	.col-12 {width: 100%;}
 	
+    body {
+        width: 95%;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 	header {
 		text-align: left;
 	}
+    
+    header aside {
+        margin-bottom: 
+    }
+    
+    article div h1, article div p, footer div {
+        text-align: left;
+    }
+    
+    #headerCase {
+        position: fixed;
+    }
+    
+    #contentCase {
+        padding-bottom: 9em;
+    }
 }

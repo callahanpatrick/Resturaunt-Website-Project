@@ -67,6 +67,7 @@ article div {
 article div h1, article div p, aside h1, aside p, footer h2, footer p {
     padding: 5px;
     min-height: 2em;
+	text-align: center;
 }
 
 footer div {

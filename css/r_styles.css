@@ -1,105 +1,230 @@
 @charset "utf-8";
-/* Simple fluid media
-   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
-   http://www.alistapart.com/articles/fluid-images/ 
-*/
-img, object, embed, video {
-	max-width: 100%;
-}
-/* IE 6 does not support max-width so default to width 100% */
-.ie6 img {
-	width:100%;
+
+/* Mobile Layout */
+
+.smi {
+	margin: 5px;
+	width: 75px;
+	border-radius: 90%;
+	background-color: #000;
 }
 
-/*
-	Dreamweaver Fluid Grid Properties
-	----------------------------------
-	dw-num-cols-mobile:		6;
-	dw-num-cols-tablet:		10;
-	dw-num-cols-desktop:	12;
-	dw-gutter-percentage:	25;
-	
-	Inspiration from "Responsive Web Design" by Ethan Marcotte 
-	http://www.alistapart.com/articles/responsive-web-design
-	
-	and Golden Grid System by Joni Korpi
-	http://goldengridsystem.com/
-*/
+.smi:hover {
+	background-color: firebrick;
+	transition: background-color .25s ease-in-out;
+}
 
-/* Mobile Layout: 480px and below. */
+.smi-l {
+	text-decoration: none;
+}
 
-.gridContainer {
-	margin-left: auto;
-	margin-right: auto;
-	width: 87.9666%;
-	padding-left: 1.5166%;
-	padding-right: 1.5166%;
+.logo {
+    height: 8em;
+    border-radius: 90%;
+}
+
+.logo:hover {
+    background-color: #93F;
+    transition: background-color .25s ease-in-out;
+}
+
+#footerwrap {
+	width: 100%;
+	height: 100%;
+	background-image: url("graphics/footer-back.png");
+}
+
+#footerdiv1 {
+	box-shadow: 0px 0px 15px #000;
+	margin-bottom: 10px; 
+	background-color: #6FF; 
+	color: #000;
+	border-radius: none;
+}
+
+#footerdiv2 {
+	box-shadow: 0px 0px 15px #000; 
+	margin-bottom: 10px; 
+	margin-top: 10px; 
+	background-color: #6FF; 
+	color: #000; 
+	border-radius: none;
+}
+
+[class*="col-"] {
+	width: 100%;
+	float: left;
 }
 
 body {
-	background-color: #CCC;
-}
-
-header, nav, article, div, aside, footer {
-	clear: both;
-	float: left;
-	margin-left: 0;
-	width: 100%;
-	display: block;
-	margin-top: 15px;
+    background-color: firebrick;
+	overflow: hidden;
 }
 
 header {
-	background-color: #FFC;
-	text-align: center;
+	background-color: #6CF;
 }
 
 nav {
+	background-color: #93F;
+}
+
+article {
+    background-color: blanchedalmond;
+}
+
+aside {
+    background-color: cadetblue;
+    color: white;
+}
+
+footer {
+	background-color: firebrick;
+    color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 }
 
-nav ul li {
-	width: 25%;
+img, object, embed, video {
+	max-width: 100%;
 }
 
-/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+header, nav {
+	height: 9em;
+	line-height: 9em;
+	text-align: center;
+}
 
-@media only screen and (min-width: 481px) {
-	.gridContainer {
-		width: 91.14%;
-		padding-left: 0.93%;
-		padding-right: 0.93%;
-	}
+nav ul, header a, footer div {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+article div {
+    min-height: 5em;
+}
+
+article div h1, article div p, aside h1, aside p, footer h2, footer p {
+    padding: 5px;
+    min-height: 2em;
+	text-align: center;
+}
+
+footer div {
+    text-align: center;
+}
+
+/* Tablet Layout */
+
+@media only screen and (min-width: 600px) and (orientation: landscape) {	
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+    
+    article div h1 {
+        text-align: center;
+    }
+    
+    #headerCase {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+    
+    #contentCase {
+        background-color: cadetblue;
+        margin-top: 9em;
+    }
 	
-	header {
-		width: 65%;
+	#footerdiv1, #footerdiv2 {
+		width: 100%;
+	}
+}
+
+/* Desktop Layout */
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+    .logo {
+        margin-left: 25px;
+    }
+    
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+    
+    header {
 		text-align: left;
+    }
+	
+	aside {
+		box-shadow: -5px 5px 30px #888888;
+	}
+    
+    article div h1, article div p, footer div {
+        text-align: left;
+    }
+    
+    #headerCase {
+        position: fixed;
+		box-shadow: 0px 0px 15px #888888;
+    }
+    
+    #contentCase {
+        padding-bottom: 9em;
+		background-color: blanchedalmond;
+    }
+	
+	#footerdiv1 {
+		border-top-right-radius: 45px;
+		border-bottom-right-radius: 45px;
+		float: left;
+		padding-top: 5px; 
+		padding-bottom: 5px; 
+		padding-left: 5px; 
+		text-align: right;
 	}
 	
-	nav {
-		width: 30%;
-		text-align: center;
-		clear: none;
-		margin-left: 5%;
-	}
-}
-
-/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
-
-@media only screen and (min-width: 769px) {
-	.gridContainer {
-		width: 88.5%;
-		max-width: 1232px;
-		padding-left: 0.75%;
-		padding-right: 0.75%;
-		margin: auto;
+	#footerdiv2 {
+		border-top-left-radius: 45px;
+		border-bottom-left-radius: 45px;
+		float: right;
+		text-align: left;
+		padding-top: 5px; 
+		padding-right: 5px; 
+		padding-bottom: 5px; 
 	}
 	
-	header {
-		width: 75%;
+	#footerdiv1, #footerdiv2 {
+		width: 40%;
 	}
 	
-	nav {
-		width: 20%;
+	#footerdiv1 p, #footerdiv1 h3 {
+		text-align: right;
+		margin-right: 10%;
+	}
+	
+	#footerdiv2 p, #footerdiv2 h3, #footerdiv2 h4 {
+		text-align: left;
+		margin-left: 10%;
 	}
 }

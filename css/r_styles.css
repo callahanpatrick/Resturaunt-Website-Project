@@ -2,6 +2,22 @@
 
 /* Mobile Layout */
 
+.smi {
+	margin: 5px;
+	width: 75px;
+	border-radius: 90%;
+	background-color: #000;
+}
+
+.smi:hover {
+	background-color: firebrick;
+	transition: background-color .25s ease-in-out;
+}
+
+.smi-l {
+	text-decoration: none;
+}
+
 .logo {
     height: 8em;
     border-radius: 90%;
@@ -10,6 +26,29 @@
 .logo:hover {
     background-color: #93F;
     transition: background-color .25s ease-in-out;
+}
+
+#footerwrap {
+	width: 100%;
+	height: 100%;
+	background-image: url("graphics/footer-back.png");
+}
+
+#footerdiv1 {
+	box-shadow: 0px 0px 15px #000;
+	margin-bottom: 10px; 
+	background-color: #6FF; 
+	color: #000;
+	border-radius: none;
+}
+
+#footerdiv2 {
+	box-shadow: 0px 0px 15px #000; 
+	margin-bottom: 10px; 
+	margin-top: 10px; 
+	background-color: #6FF; 
+	color: #000; 
+	border-radius: none;
 }
 
 [class*="col-"] {
@@ -42,6 +81,9 @@ aside {
 footer {
 	background-color: firebrick;
     color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 img, object, embed, video {
@@ -54,7 +96,7 @@ header, nav {
 	text-align: center;
 }
 
-nav ul, header a {
+nav ul, header a, footer div {
 	display: inline-block;
 	line-height: normal;
 	vertical-align: middle;
@@ -104,6 +146,10 @@ footer div {
         background-color: cadetblue;
         margin-top: 9em;
     }
+	
+	#footerdiv1, #footerdiv2 {
+		width: 100%;
+	}
 }
 
 /* Desktop Layout */
@@ -147,4 +193,38 @@ footer div {
         padding-bottom: 9em;
 		background-color: blanchedalmond;
     }
+	
+	#footerdiv1 {
+		border-top-right-radius: 45px;
+		border-bottom-right-radius: 45px;
+		float: left;
+		padding-top: 5px; 
+		padding-bottom: 5px; 
+		padding-left: 5px; 
+		text-align: right;
+	}
+	
+	#footerdiv2 {
+		border-top-left-radius: 45px;
+		border-bottom-left-radius: 45px;
+		float: right;
+		text-align: left;
+		padding-top: 5px; 
+		padding-right: 5px; 
+		padding-bottom: 5px; 
+	}
+	
+	#footerdiv1, #footerdiv2 {
+		width: 40%;
+	}
+	
+	#footerdiv1 p, #footerdiv1 h3 {
+		text-align: right;
+		margin-right: 10%;
+	}
+	
+	#footerdiv2 p, #footerdiv2 h3, #footerdiv2 h4 {
+		text-align: left;
+		margin-left: 10%;
+	}
 }
